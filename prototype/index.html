@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#19314a">
+  <title>Training Audit Recorder | Prototype</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><span class="brand-symbol" aria-hidden="true">✓</span><div><strong>FieldNotes</strong><small>Training audit workspace</small></div></div>
+      <span class="header-pill">ASSIGNMENT 2 PROTOTYPE</span>
+    </div>
+  </header>
+  <main class="container" id="main-content">
+    <div class="intro">
+      <div><p class="eyebrow">TRAINING QUALITY · AUDIT CAPTURE</p><h1>Record a training audit</h1><p class="lead">Document a process observation using a consistent, easy-to-review form.</p></div>
+      <div class="privacy"><span aria-hidden="true">ⓘ</span><p><strong>Practice data only.</strong> This demonstration has no sign-in. Do not enter actual employee names, identifiers, or confidential details.</p></div>
+    </div>
+    <div class="layout">
+      <section class="panel form-panel" aria-labelledby="form-title">
+        <div class="panel-title"><div><p class="eyebrow">NEW RECORD</p><h2 id="form-title">Observation details</h2></div><span class="step">01 / 01</span></div>
+        <form id="audit-form" novalidate>
+          <div class="field-grid">
+            <div class="field"><label for="observation_date">Observation date <span aria-hidden="true">*</span></label><input type="date" id="observation_date" name="observation_date" required aria-describedby="date-error"><small class="error" id="date-error"></small></div>
+            <div class="field"><label for="process_area">Process area <span aria-hidden="true">*</span></label><select id="process_area" name="process_area" required aria-describedby="area-error"><option value="">Choose a process</option><option>Outbound Pack</option><option>Rebin</option><option>Induct</option><option>Pick</option><option>Other</option></select><small class="error" id="area-error"></small></div>
+          </div>
+          <fieldset class="result-group"><legend>Audit result <span aria-hidden="true">*</span></legend><div class="result-options"><label class="radio-card"><input type="radio" name="result" value="Meets Standard"><span><strong>Meets standard</strong><small>Process followed correctly</small></span></label><label class="radio-card"><input type="radio" name="result" value="Needs Follow-up"><span><strong>Needs follow-up</strong><small>Additional coaching needed</small></span></label></div><small class="error" id="result-error"></small></fieldset>
+          <div class="field"><div class="label-row"><label for="observation_note">Observation note <span aria-hidden="true">*</span></label><span id="note-count">0 / 500</span></div><textarea id="observation_note" name="observation_note" rows="5" minlength="10" maxlength="500" placeholder="Example: Associate followed the scan sequence correctly during a sample task; no corrective action required." required aria-describedby="note-hint note-error"></textarea><small id="note-hint" class="hint">10–500 characters. Use fictional, non-identifying observations only.</small><small class="error" id="note-error"></small></div>
+          <div id="feedback" class="feedback" role="status" aria-live="polite" tabindex="-1" hidden></div>
+          <div class="form-actions"><button id="save-button" type="submit" class="primary">Save audit <span aria-hidden="true">→</span></button><button class="secondary" type="reset">Clear form</button></div>
+        </form>
+      </section>
+      <aside class="panel side-panel" aria-labelledby="recent-title"><div class="panel-title"><div><p class="eyebrow">LOCAL HISTORY</p><h2 id="recent-title">Recently saved</h2></div><span id="count" class="count-pill">0</span></div><p class="muted">Your most recent records appear here after saving. They remain on this computer after refreshing.</p><div id="recent-list" aria-live="polite"><div class="empty"><div class="empty-icon" aria-hidden="true">▤</div><h3>No audits yet</h3><p>Complete the form to create your first audit record.</p></div></div></aside>
+    </div>
+    <footer>Prototype scope: FR-01 / US-01 record an audit · Local SQLite storage · No personal data</footer>
+  </main>
+</body>
+</html>

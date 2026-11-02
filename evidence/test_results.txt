@@ -1,0 +1,17 @@
+test_01_valid_create_returns_unique_id (test_app.APITests.test_01_valid_create_returns_unique_id) ... ok
+test_02_required_fields_rejected_without_insert (test_app.APITests.test_02_required_fields_rejected_without_insert) ... ok
+test_03_invalid_calendar_date_rejected (test_app.APITests.test_03_invalid_calendar_date_rejected) ... ok
+test_04_future_date_rejected (test_app.APITests.test_04_future_date_rejected) ... ok
+test_05_unsupported_result_rejected (test_app.APITests.test_05_unsupported_result_rejected) ... ok
+test_06_short_note_rejected (test_app.APITests.test_06_short_note_rejected) ... ok
+test_07_saved_records_persist_across_repository_instances (test_app.APITests.test_07_saved_records_persist_across_repository_instances) ... ok
+test_08_sequential_ids_and_newest_first (test_app.APITests.test_08_sequential_ids_and_newest_first) ... ok
+test_09_unsupported_area_rejected (test_app.APITests.test_09_unsupported_area_rejected) ... ok
+test_10_database_check_constraint_defends_invalid_values (test_app.APITests.test_10_database_check_constraint_defends_invalid_values) ... ok
+test_11_not_found_route_rejected (test_app.APITests.test_11_not_found_route_rejected) ... ok
+test_12_html_payload_stored_as_plain_text_not_markup (test_app.APITests.test_12_html_payload_stored_as_plain_text_not_markup) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 6.113s
+
+OK
